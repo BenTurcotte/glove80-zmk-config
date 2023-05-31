@@ -103,7 +103,7 @@
 
     /* Custom Defined Behaviors */
     macros {
-        tm_1: test_macro {
+        btm_1: ben_test_macro {
             label = "TEST";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
