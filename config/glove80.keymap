@@ -229,7 +229,7 @@
             bindings = <
  &trans  &trans  &trans  &trans  &trans                                                                                                                    &trans  &trans  &trans                   &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &macro_tap &kp M &kp A &kp C &kp R &kp O                                                  &trans                  &trans  &trans  &trans                   &trans  &trans
- &trans  &trans  &trans  &trans  &trans                               &test_macro                                                  &trans                  &trans  &trans  &trans                   &trans  &trans
+ &trans  &trans  &trans  &trans  &trans                               &btm_1                                                  &trans                  &trans  &trans  &trans                   &trans  &trans
  &trans  &trans  &trans  &trans  &trans                                    &trans                                                  &trans  &kp LG(RC(LEFT_ARROW))  &trans  &trans  &kp LG(RC(RIGHT_ARROW))  &trans
  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans                   &trans  &trans
  &trans  &trans  &trans  &trans  &trans                                            &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans                   &trans  &trans
