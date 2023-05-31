@@ -159,12 +159,12 @@
 
         layer_Base {
             bindings = <
-      &none     &kp LG(N1)     &kp LG(N2)      &kp LG(N3)      &kp LG(N4)                                                                                                                    &kp LG(N5)      &kp LG(N6)     &kp LG(N7)               &kp LG(N8)       &none
+      &kp LG(T)     &kp LG(N1)     &kp LG(N2)      &kp LG(N3)      &kp LG(N4)                                                                                                                    &kp LG(N5)      &kp LG(N6)     &kp LG(N7)               &kp LG(N8)       &none
       &none          &none          &none           &none          &kp F7  &kp F12                                                                                        &none  &kp LC(LG(LEFT_ARROW))           &none          &none  &kp LC(LG(RIGHT_ARROW))       &none
       &none          &kp Q          &kp W           &kp F           &kp P    &kp V                                                                                        &kp J                   &kp L           &kp U          &kp Y                  &kp SQT       &none
       &none  &my_ht LGUI A  &my_ht LALT R  &my_ht LCTRL S  &my_ht LSHFT T    &kp G                                                                                        &kp H          &my_ht RSHFT N  &my_ht RCTRL E  &my_ht RALT I            &my_ht RGUI O       &none
       &none          &kp Z          &kp X           &kp C           &kp D    &kp B   &lt 1 BSPC  &lt 3 RET  &lt 7 C_AC_SEARCH  &kp BSPC  &lt 7 K_APP  &kp LC(BACKSPACE)   &kp K                   &kp M       &kp COMMA        &kp DOT                 &kp FSLH       &none
- &magic 2 0       &kp LGUI       &kp LALT       &kp LCTRL       &kp LSHFT           &lt 5 SPACE  &lt 6 TAB          &lt 4 ESC   &kp DEL    &lt 3 RET         &lt 1 BSPC                       &kp RSHFT       &kp RCTRL       &kp RALT                 &kp RGUI  &magic 2 0
+ &magic 2 0       &kp LC(PG_UP)       &kp LA(LEFT)       &kp LA(RIGHT)       &kp LC(PG_DN)           &lt 5 SPACE  &lt 6 TAB          &lt 4 ESC   &kp DEL    &lt 3 RET         &lt 1 BSPC                       &kp RSHFT       &kp RCTRL       &kp RALT                 &kp RGUI  &magic 2 0
             >;
         };
 
