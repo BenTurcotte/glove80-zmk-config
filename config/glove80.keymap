@@ -101,6 +101,12 @@
             label = "POWERSHELL_MACRO";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            bindings = <&macro_tap &kp P &kp O &kp W &kp E &kp R &kp S &kp H &kp E &kp L &kp L>;
+        };
+        psm2: powershell_macro_2 {
+            label = "POWERSHELL_MACRO_2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp P>
                 , <&macro_tap &kp O>
@@ -254,7 +260,7 @@
  &trans  &trans  &trans  &trans  &trans                                                                                                                    &trans  &trans  &trans                   &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans                  &trans  &trans  &trans                   &trans  &trans
  &trans  &trans  &trans  &trans  &psm    &btm_1                                                  &trans                  &trans  &trans  &trans                   &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &kp LG(RC(LEFT_ARROW))  &trans  &trans  &kp LG(RC(RIGHT_ARROW))  &trans
+ &trans  &trans  &trans  &trans  &psm2   &trans                                                  &trans  &kp LG(RC(LEFT_ARROW))  &trans  &trans  &kp LG(RC(RIGHT_ARROW))  &trans
  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans                   &trans  &trans
  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans                   &trans  &trans
             >;
