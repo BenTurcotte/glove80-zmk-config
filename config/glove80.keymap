@@ -184,8 +184,8 @@
       &none          &none          &none           &none          &kp F7  &kp F12                                                                                    &none           &none           &none          &none          &none       &none
       &none          &kp Q          &kp W           &kp F           &kp P    &kp V                                                                                    &kp J           &kp L           &kp U          &kp Y        &kp SQT       &none
       &none  &my_ht LGUI A  &my_ht LALT R  &my_ht LCTRL S  &my_ht LSHFT T    &kp G                                                                                    &kp H  &my_ht RSHFT N  &my_ht RCTRL E  &my_ht RALT I  &my_ht RGUI O       &none
-      &none          &kp Z          &kp X           &kp C           &kp D    &kp B     &lt 1 BSPC  &lt 3 RET  &lt 7 C_AC_SEARCH  &lt 7 K_APP    &kp DEL   &kp BSPC    &kp K           &kp M       &kp COMMA        &kp DOT       &kp FSLH       &none
-      &magic 2 0     &none          &none           &none           &none             &lt 5 SPACE  &lt 6 TAB          &lt 4 ESC    &lt 4 ESC  &lt 3 RET  &lt 1 BSPC               &kp RSHFT       &kp RCTRL       &kp RALT       &kp RGUI  &magic 2 0
+      &none          &kp Z          &kp X           &kp C           &kp D    &kp B    &lt 5 SPACE  &lt 6 TAB          &lt 4 ESC    &lt 4 ESC  &lt 3 RET  &lt 1 BSPC   &kp K           &kp M       &kp COMMA        &kp DOT       &kp FSLH       &none
+      &magic 2 0     &none          &none           &none           &none              &lt 1 BSPC  &lt 3 RET  &lt 7 C_AC_SEARCH  &lt 7 K_APP    &kp DEL    &kp BSPC               &kp RSHFT       &kp RCTRL       &kp RALT       &kp RGUI  &magic 2 0
             >;
         };
 
