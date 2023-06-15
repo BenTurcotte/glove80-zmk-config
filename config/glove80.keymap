@@ -123,86 +123,18 @@
             tap-ms = <10>;
             #binding-cells = <0>;
             bindings                
-                = <&macro_tap &kp LG(R)>
-                , <&macro_wait_time 500>
-                , <&macro_tap &kp P>
-                , <&macro_wait_time 10>
-                , <&macro_tap &kp W>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp H>
-                , <&macro_tap &kp RET>
-                , <&macro_wait_time 20000>
-                , <&macro_tap &kp S>
-                , <&macro_wait_time 10>
-                , <&macro_tap &kp C>
-                , <&macro_tap &kp H>
-                , <&macro_tap &kp T>
-                , <&macro_tap &kp A>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp K>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp FSLH>
-                , <&macro_tap &kp C>
-                , <&macro_tap &kp R>
-                , <&macro_tap &kp E>
-                , <&macro_tap &kp A>
-                , <&macro_tap &kp T>
-                , <&macro_tap &kp E>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp FSLH>
-                , <&macro_tap &kp T>
-                , <&macro_tap &kp N>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp DQT>
-                , <&macro_tap &kp M>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp G>
-                , <&macro_tap &kp DQT>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp FSLH>
-                , <&macro_tap &kp T>
-                , <&macro_tap &kp R>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp DQT>
-                , <&macro_tap &kp C>
-                , <&macro_tap &kp M>
-                , <&macro_tap &kp D>
-                , <&macro_tap &kp DQT>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp FSLH>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp C>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp O>
-                , <&macro_tap &kp N>
-                , <&macro_tap &kp C>
-                , <&macro_tap &kp E>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp FSLH>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp D>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp M>
-                , <&macro_tap &kp M>
-                , <&macro_tap &kp FSLH>
-                , <&macro_tap &kp D>
-                , <&macro_tap &kp D>
-                , <&macro_tap &kp FSLH>
-                , <&macro_tap &kp Y>
-                , <&macro_tap &kp Y>
-                , <&macro_tap &kp Y>
-                , <&macro_tap &kp Y>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp FSLH>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp T>
-                , <&macro_tap &kp SPACE>
-                , <&macro_tap &kp H>
-                , <&macro_tap &kp H>
-                , <&macro_tap &kp COLON>
-                , <&macro_tap &kp M>
-                , <&macro_tap &kp M>
+                = <&macro_tap &kp S &kp C &kp H &kp T &kp A &kp S &kp K &kp S &kp SPACE>
+                , <&macro_tap &kp FSLH &kp C &kp R &kp E &kp A &kp T &kp E &kp SPACE>
+                , <&macro_tap &kp FSLH &kp T &kp N &kp SPACE>
+                , <&macro_tap &kp DQT &kp M &kp S &kp G &kp DQT &kp SPACE>
+                , <&macro_tap &kp FSLH &kp T &kp R &kp SPACE>
+                , <&macro_tap &kp DQT &kp C &kp M &kp D &kp DQT &kp SPACE>
+                , <&macro_tap &kp FSLH &kp S &kp C &kp SPACE>
+                , <&macro_tap &kp O &kp N &kp C &kp E &kp SPACE>
+                , <&macro_tap &kp FSLH &kp S &kp D &kp SPACE>
+                , <&macro_tap &kp M &kp M &kp FSLH &kp D &kp D &kp FSLH &kp Y &kp Y &kp Y &kp Y &kp SPACE>
+                , <&macro_tap &kp FSLH &kp S &kp T &kp SPACE>
+                , <&macro_tap &kp H &kp H &kp COLON &kp M &kp M>
                 ;
         };
         left42_m: left_42_times_macro {
@@ -312,7 +244,7 @@
 
         layer_Base {
             bindings = <
-  &kp LG(E)     &kp LG(N1)     &kp LG(N2)      &kp LG(E)           &kp LG(N4)                                                                                                        &kp LG(N5)           &kp LG(N6)     &kp LG(N7)     &kp LG(N8)       &none
+      &none          &none          &none       &kp LG(E)                &none                                                                                                             &none                &none          &none          &none       &none
       &none          &none          &none     &key_repeat               &kp F7  &kp F12                                                                                    &none           &none          &key_repeat          &none          &none       &none
       &none          &kp Q          &kp W           &kp F                &kp P    &kp V                                                                                    &kp J           &kp L                &kp U          &kp Y        &kp SQT       &none
       &none  &my_ht LGUI A  &my_ht LALT R  &my_ht LCTRL S  &my_shft_ht LSHFT T    &kp G                                                                                    &kp H  &my_shft_ht RSHFT N  &my_ht RCTRL E  &my_ht RALT I  &my_ht RGUI O       &none
