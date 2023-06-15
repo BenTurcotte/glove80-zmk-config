@@ -97,15 +97,11 @@
 
     /* Custom Defined Behaviors */
     macros {
-        psm: powershell_macro {
+        ps_m: powershell_macro {
             label = "POWERSHELL_MACRO";
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp P &kp O &kp W &kp E &kp R &kp S &kp H &kp E &kp L &kp L>;
-        };
-        psm2: powershell_macro_2 {
-            label = "POWERSHELL_MACRO_2";
-            compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp P>
@@ -120,14 +116,142 @@
                 , <&macro_tap &kp L>
                 ;
         };
-        btm_1: ben_test_macro {
-            label = "TEST";
+        ts_m: task_scheduler_macro {
+            label = "TASK_SCHEDULER_MACRO";
             compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
+            #binding-cells = <0>;
+            bindings                
+                = <&macro_tap &kp LG(R)>
+                , <&macro_wait_time 500>
+                , <&macro_tap &kp P>
+                , <&macro_wait_time 10>
+                , <&macro_tap &kp W>
+                , <&macro_tap &kp S>
+                , <&macro_tap &kp H>
+                , <&macro_tap &kp RET>
+                , <&macro_wait_time 20000>
+                , <&macro_tap &kp S>
+                , <&macro_wait_time 10>
+                , <&macro_tap &kp C>
+                , <&macro_tap &kp H>
+                , <&macro_tap &kp T>
+                , <&macro_tap &kp A>
+                , <&macro_tap &kp S>
+                , <&macro_tap &kp K>
+                , <&macro_tap &kp S>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp FSLH>
+                , <&macro_tap &kp C>
+                , <&macro_tap &kp R>
+                , <&macro_tap &kp E>
+                , <&macro_tap &kp A>
+                , <&macro_tap &kp T>
+                , <&macro_tap &kp E>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp FSLH>
+                , <&macro_tap &kp T>
+                , <&macro_tap &kp N>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp DQT>
+                , <&macro_tap &kp M>
+                , <&macro_tap &kp S>
+                , <&macro_tap &kp G>
+                , <&macro_tap &kp DQT>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp FSLH>
+                , <&macro_tap &kp T>
+                , <&macro_tap &kp R>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp DQT>
+                , <&macro_tap &kp C>
+                , <&macro_tap &kp M>
+                , <&macro_tap &kp D>
+                , <&macro_tap &kp DQT>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp FSLH>
+                , <&macro_tap &kp S>
+                , <&macro_tap &kp C>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp O>
+                , <&macro_tap &kp N>
+                , <&macro_tap &kp C>
+                , <&macro_tap &kp E>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp FSLH>
+                , <&macro_tap &kp S>
+                , <&macro_tap &kp D>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp M>
+                , <&macro_tap &kp M>
+                , <&macro_tap &kp FSLH>
+                , <&macro_tap &kp D>
+                , <&macro_tap &kp D>
+                , <&macro_tap &kp FSLH>
+                , <&macro_tap &kp Y>
+                , <&macro_tap &kp Y>
+                , <&macro_tap &kp Y>
+                , <&macro_tap &kp Y>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp FSLH>
+                , <&macro_tap &kp S>
+                , <&macro_tap &kp T>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp H>
+                , <&macro_tap &kp H>
+                , <&macro_tap &kp COLON>
+                , <&macro_tap &kp M>
+                , <&macro_tap &kp M>
+                ;
+        };
+        left42_m: left_42_times_macro {
+            label = "LEFT_42_TIMES_MACRO";
+            compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp O &kp R &kp C &kp A &kp M>
-                , <&macro_release &kp LSHFT>
+                = <&macro_tap &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
+                , <&macro_tap &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
+                , <&macro_tap &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
+                , <&macro_tap &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
+                , <&macro_tap &kp LEFT &kp LEFT>
+                ;
+        };
+        right7_m: right_7_times_macro {
+            label = "RIGHT_7_TIMES_MACRO";
+            compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>
+                ;
+        };
+        right15_m: right_15_times_macro {
+            label = "RIGHT_7_TIMES_MACRO";
+            compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>
+                , <&macro_tap &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>
+                , <&macro_tap &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>
+                ;
+        };
+        cleardate_lr_m: clear_date_field_left_to_right_macro {
+            label = "CLEAR_DATE_FIELD_LEFT_TO_RIGHT_MACRO";
+            compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp DEL &kp DEL &kp RIGHT>
+                , <&macro_tap &kp DEL &kp DEL &kp RIGHT>
+                , <&macro_tap &kp DEL &kp DEL &kp DEL &kp DEL>
+                , <&macro_tap &kp LEFT &kp LEFT>
                 ;
         };
         rgb_mo_1: rgb_mo_1 {
@@ -151,6 +275,14 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+        my_shft_ht: my_shift_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MY_SHIFT_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
         lh_pht: left_hand_positional_hold_tap {
@@ -180,12 +312,12 @@
 
         layer_Base {
             bindings = <
-  &kp LG(T)     &kp LG(N1)     &kp LG(N2)      &kp LG(N3)      &kp LG(N4)                                                                                                        &kp LG(N5)      &kp LG(N6)     &kp LG(N7)     &kp LG(N8)       &none
-      &none          &none          &none           &none          &kp F7  &kp F12                                                                                    &none           &none           &none          &none          &none       &none
-      &none          &kp Q          &kp W           &kp F           &kp P    &kp V                                                                                    &kp J           &kp L           &kp U          &kp Y        &kp SQT       &none
-      &none  &my_ht LGUI A  &my_ht LALT R  &my_ht LCTRL S  &my_ht LSHFT T    &kp G                                                                                    &kp H  &my_ht RSHFT N  &my_ht RCTRL E  &my_ht RALT I  &my_ht RGUI O       &none
-      &none          &kp Z          &kp X           &kp C           &kp D    &kp B     &lt 1 BSPC  &lt 3 RET  &lt 7 C_AC_SEARCH  &lt 7 K_APP    &kp DEL    &kp BSPC   &kp K           &kp M       &kp COMMA        &kp DOT       &kp FSLH       &none
-      &magic 2 0     &none          &none           &none           &none             &lt 5 SPACE  &lt 6 TAB          &lt 4 ESC    &lt 4 ESC  &lt 3 RET  &lt 1 BSPC               &kp RSHFT       &kp RCTRL       &kp RALT       &kp RGUI  &magic 2 0
+  &kp LG(E)     &kp LG(N1)     &kp LG(N2)      &kp LG(E)           &kp LG(N4)                                                                                                        &kp LG(N5)           &kp LG(N6)     &kp LG(N7)     &kp LG(N8)       &none
+      &none          &none          &none     &key_repeat               &kp F7  &kp F12                                                                                    &none           &none          &key_repeat          &none          &none       &none
+      &none          &kp Q          &kp W           &kp F                &kp P    &kp V                                                                                    &kp J           &kp L                &kp U          &kp Y        &kp SQT       &none
+      &none  &my_ht LGUI A  &my_ht LALT R  &my_ht LCTRL S  &my_shft_ht LSHFT T    &kp G                                                                                    &kp H  &my_shft_ht RSHFT N  &my_ht RCTRL E  &my_ht RALT I  &my_ht RGUI O       &none
+      &none          &kp Z          &kp X           &kp C                &kp D    &kp B     &lt 1 BSPC  &lt 3 RET  &lt 7 C_AC_SEARCH  &lt 7 K_APP    &kp DEL    &kp BSPC   &kp K           &kp M            &kp COMMA        &kp DOT       &kp FSLH       &none
+  &magic 2 0         &none          &none           &none           &key_repeat             &lt 5 SPACE  &lt 6 TAB          &lt 4 ESC    &lt 4 ESC  &lt 3 RET  &lt 1 BSPC            &key_repeat            &kp RCTRL       &kp RALT       &kp RGUI  &magic 2 0
             >;
         };
 
@@ -239,7 +371,7 @@
  &trans    &trans    &trans     &trans     &trans  &trans                                                           &trans    &trans     &trans     &trans     &trans  &trans
  &trans    &trans    &trans     &trans     &trans  &trans                                                          &kp INS    &trans     &trans     &trans     &trans  &trans
  &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                                                         &kp CAPS  &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT  &trans
- &trans    &trans    &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAUSE_BREAK  &kp HOME  &kp PG_UP  &kp PG_DN    &kp END  &trans
+ &trans  &kp LEFT  &kp DOWN     &kp UP  &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAUSE_BREAK  &kp HOME  &kp PG_UP  &kp PG_DN    &kp END  &trans
  &trans    &trans    &trans     &trans     &trans          &trans  &trans  &trans  &trans  &trans  &trans                     &trans     &trans     &trans     &trans  &trans
             >;
         };
@@ -257,12 +389,12 @@
 
         layer_Macro {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                                                                    &trans  &trans  &trans                   &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans                  &trans  &trans  &trans                   &trans  &trans
- &trans  &trans  &trans  &trans  &psm    &btm_1                                                  &trans                  &trans  &trans  &trans                   &trans  &trans
- &trans  &trans  &trans  &trans  &psm2   &trans                                                  &trans  &kp LG(RC(LEFT_ARROW))  &trans  &trans  &kp LG(RC(RIGHT_ARROW))  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans                   &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans                   &trans  &trans
+ &ts_m   &left42_m  &right7_m  &right7_m  &cleardate_lr_m                                                                                  &trans  &trans  &trans                   &trans  &trans
+ &trans     &trans     &trans     &trans           &trans  &trans                                                  &trans                  &trans  &trans  &trans                   &trans  &trans
+ &trans     &trans     &trans     &trans            &ps_m  &trans                                                  &trans                  &trans  &trans  &trans                   &trans  &trans
+ &trans     &trans     &trans     &trans           &trans  &trans                                                  &trans  &kp LG(RC(LEFT_ARROW))  &trans  &trans  &kp LG(RC(RIGHT_ARROW))  &trans
+ &trans     &trans     &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans                   &trans  &trans
+ &trans     &trans     &trans     &trans           &trans          &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans                   &trans  &trans
             >;
         };
 
