@@ -206,7 +206,9 @@
             label = "MY_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
+            require-prior-idle-ms = <125>;
+            quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
         my_shft_ht: my_shift_hold_tap {
@@ -214,7 +216,7 @@
             label = "MY_SHIFT_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
         lh_pht: left_hand_positional_hold_tap {
@@ -248,8 +250,8 @@
       &none          &none          &none     &key_repeat               &kp F7  &kp F12                                                                                    &none           &none          &key_repeat          &none          &none       &none
       &none          &kp Q          &kp W           &kp F                &kp P    &kp V                                                                                    &kp J           &kp L                &kp U          &kp Y        &kp SQT       &none
       &none  &my_ht LGUI A  &my_ht LALT R  &my_ht LCTRL S  &my_shft_ht LSHFT T    &kp G                                                                                    &kp H  &my_shft_ht RSHFT N  &my_ht RCTRL E  &my_ht RALT I  &my_ht RGUI O       &none
-      &none          &kp Z          &kp X           &kp C                &kp D    &kp B     &lt 1 BSPC  &lt 3 RET  &lt 7 C_AC_SEARCH  &lt 7 K_APP    &kp DEL    &kp BSPC   &kp K           &kp M            &kp COMMA        &kp DOT       &kp FSLH       &none
-  &magic 2 0         &none          &none           &none           &key_repeat             &lt 5 SPACE  &lt 6 TAB          &lt 4 ESC    &lt 4 ESC  &lt 3 RET  &lt 1 BSPC            &key_repeat            &kp RCTRL       &kp RALT       &kp RGUI  &magic 2 0
+      &none          &kp Z          &kp X           &kp C                &kp D    &kp B     &lt 1 BSPC   &lt 3 RET  &lt 7 C_AC_SEARCH  &lt 7 K_APP    &kp DEL    &kp BSPC   &kp K           &kp M            &kp COMMA        &kp DOT       &kp FSLH       &none
+  &magic 2 0         &none          &none           &none           &key_repeat             &lt 5 SPACE  &lt 6 TAB  &lt 4 ESC            &lt 4 ESC  &lt 3 RET  &lt 1 BSPC            &key_repeat            &kp RCTRL       &kp RALT       &kp RGUI  &magic 2 0
             >;
         };
 
