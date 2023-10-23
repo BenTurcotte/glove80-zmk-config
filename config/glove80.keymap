@@ -116,76 +116,6 @@
                 , <&macro_tap &kp L>
                 ;
         };
-        ts_m: task_scheduler_macro {
-            label = "TASK_SCHEDULER_MACRO";
-            compatible = "zmk,behavior-macro";
-            wait-ms = <10>;
-            tap-ms = <10>;
-            #binding-cells = <0>;
-            bindings                
-                = <&macro_tap &kp S &kp C &kp H &kp T &kp A &kp S &kp K &kp S &kp SPACE>
-                , <&macro_tap &kp FSLH &kp C &kp R &kp E &kp A &kp T &kp E &kp SPACE>
-                , <&macro_tap &kp FSLH &kp T &kp N &kp SPACE>
-                , <&macro_tap &kp DQT &kp M &kp S &kp G &kp DQT &kp SPACE>
-                , <&macro_tap &kp FSLH &kp T &kp R &kp SPACE>
-                , <&macro_tap &kp DQT &kp C &kp M &kp D &kp DQT &kp SPACE>
-                , <&macro_tap &kp FSLH &kp S &kp C &kp SPACE>
-                , <&macro_tap &kp O &kp N &kp C &kp E &kp SPACE>
-                , <&macro_tap &kp FSLH &kp S &kp D &kp SPACE>
-                , <&macro_tap &kp M &kp M &kp FSLH &kp D &kp D &kp FSLH &kp Y &kp Y &kp Y &kp Y &kp SPACE>
-                , <&macro_tap &kp FSLH &kp S &kp T &kp SPACE>
-                , <&macro_tap &kp H &kp H &kp COLON &kp M &kp M>
-                ;
-        };
-        left42_m: left_42_times_macro {
-            label = "LEFT_42_TIMES_MACRO";
-            compatible = "zmk,behavior-macro";
-            wait-ms = <10>;
-            tap-ms = <10>;
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
-                , <&macro_tap &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
-                , <&macro_tap &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
-                , <&macro_tap &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>
-                , <&macro_tap &kp LEFT &kp LEFT>
-                ;
-        };
-        right7_m: right_7_times_macro {
-            label = "RIGHT_7_TIMES_MACRO";
-            compatible = "zmk,behavior-macro";
-            wait-ms = <10>;
-            tap-ms = <10>;
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>
-                ;
-        };
-        right15_m: right_15_times_macro {
-            label = "RIGHT_7_TIMES_MACRO";
-            compatible = "zmk,behavior-macro";
-            wait-ms = <10>;
-            tap-ms = <10>;
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>
-                , <&macro_tap &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>
-                , <&macro_tap &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>
-                ;
-        };
-        cleardate_lr_m: clear_date_field_left_to_right_macro {
-            label = "CLEAR_DATE_FIELD_LEFT_TO_RIGHT_MACRO";
-            compatible = "zmk,behavior-macro";
-            wait-ms = <10>;
-            tap-ms = <10>;
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp DEL &kp DEL &kp RIGHT>
-                , <&macro_tap &kp DEL &kp DEL &kp RIGHT>
-                , <&macro_tap &kp DEL &kp DEL &kp DEL &kp DEL>
-                , <&macro_tap &kp LEFT &kp LEFT>
-                ;
-        };
         rgb_mo_1: rgb_mo_1 {
             label = "RGB_MO_1";
             compatible = "zmk,behavior-macro";
@@ -219,26 +149,6 @@
             tapping-term-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
-        lh_pht: left_hand_positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_POSITIONAL_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <200>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <40 41 42 43 44 45>;
-        };
-        rh_pht: right_hand_positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_POSITIONAL_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <200>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <34 35 36 37 38 39>;
-        };
     };
 
     keymap {
@@ -246,12 +156,12 @@
 
         layer_Base {
             bindings = <
-      &none          &none          &none          &none                &none                                                                                                               &none                &none          &none          &none       &none
-      &none          &none          &none     &key_repeat               &kp F7  &kp F12                                                                                     &none           &none          &key_repeat          &none          &none       &none
-      &none          &kp Q          &kp W           &kp F                &kp P    &kp V                                                                                     &kp J           &kp L                &kp U          &kp Y        &kp SQT  &magic 2 0
-      &none  &my_ht LGUI A  &my_ht LALT R  &my_ht LCTRL S  &my_shft_ht LSHFT T    &kp G                                                                                     &kp H  &my_shft_ht RSHFT N  &my_ht RCTRL E  &my_ht RALT I  &my_ht RGUI O       &none
-      &none          &kp Z          &kp X           &kp C                &kp D    &kp B     &lt 5 SPACE  &lt 6 TAB  &lt 4 ESC            &lt 4 ESC  &lt 3 RET   &lt 1 BSPC  &kp K           &kp M            &kp COMMA        &kp DOT       &kp FSLH       &none
-  &magic 2 0         &none          &none           &none           &key_repeat             &lt 1 BSPC   &lt 3 RET  &lt 7 C_AC_SEARCH  &lt 7 K_APP    &kp DEL  &lt 5 SPACE            &key_repeat            &kp RCTRL       &kp RALT       &kp RGUI       &none
+      &none          &none          &none           &none                &none                                                                                            &none                &none           &none          &none          &none
+      &none          &none          &none           &none                &none  &none                                                                              &none  &none                &none           &none          &none          &none
+    &kp ESC          &kp Q          &kp W           &kp F                &kp P  &kp V                                                                              &kp J  &kp L                &kp U           &kp Y          &kp SQT        &magic 2 0
+   &kp BSPC  &my_ht LGUI A  &my_ht LALT R  &my_ht LCTRL S  &my_shft_ht LSHFT T  &kp G                                                                              &kp H  &my_shft_ht RSHFT N  &my_ht RCTRL E  &my_ht RALT I  &my_ht RGUI O  &none
+    &kp RET          &kp Z          &kp X           &kp C                &kp D  &kp B   &lt 1 BSPC  &lt 3 RET  &lt 7 ESC        &lt 7 ESC  &lt 6 TAB  &lt 5 SPACE  &kp K  &kp M                &kp COMMA       &kp DOT        &kp FSLH       &none
+ &magic 2 0          &kp M          &kp L           &kp E                &kp N         &lt 5 SPACE  &lt 6 TAB  &lt 4 ESC        &lt 4 ESC  &lt 3 RET  &lt 1 BSPC          &none                &none           &none          &none          &none
             >;
         };
 
@@ -261,8 +171,8 @@
  &trans     &trans  &trans  &trans  &trans     &trans                                                        &trans     &trans     &trans    &trans    &trans  &trans
  &trans   &kp LBKT  &kp N7  &kp N8  &kp N9   &kp RBKT                                                        &trans     &trans     &trans    &trans    &trans  &trans
  &trans   &kp SEMI  &kp N4  &kp N5  &kp N6  &kp EQUAL                                                        &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
- &trans  &kp GRAVE  &kp N1  &kp N2  &kp N3   &kp BSLH  &kp N0  &kp MINUS  &trans  &trans  &kp ESC  &kp DEL   &trans     &trans     &trans    &trans    &trans  &trans
- &trans     &trans  &trans  &trans  &trans             &trans  &trans     &trans  &trans  &trans    &trans              &trans     &trans    &trans    &trans  &trans
+ &trans  &kp GRAVE  &kp N1  &kp N2  &kp N3   &kp BSLH  &trans  &trans     &trans  &trans  &trans    &trans   &trans     &trans     &trans    &trans    &trans  &trans
+ &trans     &trans  &trans  &trans  &trans             &kp N0  &kp MINUS  &trans  &trans  &kp ESC  &kp DEL              &trans     &trans    &trans    &trans  &trans
             >;
         };
 
@@ -283,8 +193,8 @@
  &trans     &trans    &trans     &trans     &trans    &trans                                                       &trans     &trans     &trans    &trans    &trans  &trans
  &trans   &kp LBRC  &kp AMPS   &kp STAR   &kp LPAR  &kp RBRC                                                       &trans     &trans     &trans    &trans    &trans  &trans
  &trans  &kp COLON  &kp DLLR  &kp PRCNT  &kp CARET  &kp PLUS                                                       &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
- &trans  &kp TILDE  &kp EXCL     &kp AT   &kp HASH  &kp PIPE  &kp RPAR  &kp UNDER  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans    &trans  &trans
- &trans     &trans    &trans     &trans     &trans            &trans    &trans     &trans  &trans  &trans  &trans             &trans     &trans    &trans    &trans  &trans
+ &trans  &kp TILDE  &kp EXCL     &kp AT   &kp HASH  &kp PIPE  &trans    &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans    &trans  &trans
+ &trans     &trans    &trans     &trans     &trans            &kp RPAR  &kp UNDER  &trans  &trans  &trans  &trans             &trans     &trans    &trans    &trans  &trans
             >;
         };
 
@@ -294,8 +204,8 @@
  &trans           &trans     &trans     &trans     &trans        &trans                                                           &trans     &trans    &trans     &trans    &trans  &trans
  &trans  &kp KP_MULTIPLY  &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_PLUS                                                           &trans     &trans    &trans     &trans    &trans  &trans
  &trans     &kp KP_SLASH  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_EQUAL                                                           &trans  &kp RSHFT  &kp RALT  &kp RCTRL  &kp RGUI  &trans
- &trans       &kp KP_DOT  &kp KP_N1  &kp KP_N2  &kp KP_N3    &kp KP_DOT  &kp KP_N0  &kp KP_MINUS  &trans  &trans  &trans  &trans  &trans     &trans    &trans     &trans    &trans  &trans
- &trans           &trans     &trans     &trans     &trans                &trans     &trans        &trans  &trans  &trans  &trans             &trans    &trans     &trans    &trans  &trans
+ &trans       &kp KP_DOT  &kp KP_N1  &kp KP_N2  &kp KP_N3    &kp KP_DOT  &trans     &trans        &trans  &trans  &trans  &trans  &trans     &trans    &trans     &trans    &trans  &trans
+ &trans           &trans     &trans     &trans     &trans                &kp KP_N0  &kp KP_MINUS  &trans  &trans  &trans  &trans             &trans    &trans     &trans    &trans  &trans
             >;
         };
 
@@ -321,14 +231,14 @@
             >;
         };
 
-        layer_Macro {
+        layer_Raise {
             bindings = <
- &ts_m   &left42_m  &right7_m  &right7_m  &cleardate_lr_m                                                                                  &trans  &trans  &trans                   &trans  &trans
- &trans     &trans     &trans     &trans           &trans  &trans                                                  &trans                  &trans  &trans  &trans                   &trans  &trans
- &trans     &trans     &trans     &trans            &ps_m  &trans                                                  &trans                  &trans  &trans  &trans                   &trans  &trans
- &trans     &trans     &trans     &trans           &trans  &trans                                                  &trans  &kp LG(RC(LEFT_ARROW))  &trans  &trans  &kp LG(RC(RIGHT_ARROW))  &trans
- &trans     &trans     &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans                   &trans  &trans
- &trans     &trans     &trans     &trans           &trans          &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans                   &trans  &trans
+ &trans     &trans          &trans          &trans           &trans                                                                                 &trans           &trans           &trans          &trans          &trans
+ &trans     &trans          &kp LBRC        &kp RBRC         &trans           &trans                                                     &trans     &trans           &trans           &trans          &trans          &trans
+ &trans     &kp EXCL        &kp AT          &kp HASH         &kp DLLR         &kp PRCNT                                                  &kp CARET  &kp AMPS         &kp STAR         &kp RPAR        &kp LPAR        &trans
+ &trans     &my_ht LGUI N1  &my_ht LALT N2  &my_ht LCTRL N3  &my_ht LSHFT N4  &kp N5                                                     &kp N6     &my_ht RSHFT N7  &my_ht RCTRL N8  &my_ht RALT N9  &my_ht RGUI N0  &trans
+ &trans     &kp SEMI        &kp GRAVE       &kp EQUAL        &kp BSLH         &kp LBKT   &trans  &trans  &trans  &trans  &trans  &trans  &kp RBKT   &kp PIPE         &kp PLUS         &kp COLON          &kp TILDE          &trans
+ &trans     &trans          &trans          &trans           &trans                      &trans  &trans  &trans  &trans  &trans  &trans             &trans           &trans           &trans          &trans          &trans
             >;
         };
 
