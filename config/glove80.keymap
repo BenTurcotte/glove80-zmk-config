@@ -211,23 +211,23 @@
 
         layer_Nav {
             bindings = <
- &trans    &trans    &trans     &trans     &trans                                                                             &trans     &trans     &trans     &trans  &trans
- &trans    &trans    &trans     &trans     &trans  &trans                                                           &trans    &trans     &trans     &trans     &trans  &trans
- &trans    &trans    &trans     &trans     &trans  &trans                                                          &kp INS    &trans     &trans     &trans     &trans  &trans
- &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                                                         &kp CAPS  &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT  &trans
- &trans  &kp LEFT  &kp DOWN     &kp UP  &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAUSE_BREAK  &kp HOME  &kp PG_UP  &kp PG_DN    &kp END  &trans
- &trans    &trans    &trans     &trans     &trans          &trans  &trans  &trans  &trans  &trans  &trans                     &trans     &trans     &trans     &trans  &trans
+ &trans    &trans    &trans     &trans     &trans                                                                               &trans     &trans     &trans     &trans  &trans
+ &trans    &trans    &trans     &trans     &trans  &trans                                                             &trans    &trans     &trans     &trans     &trans  &trans
+ &trans    &trans    &trans     &trans     &trans  &trans                                                            &kp INS    &trans     &trans     &trans     &trans  &trans
+ &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                                                           &kp CAPS  &kp LEFT   &kp DOWN     &kp UP  &kp RIGHT  &trans
+ &trans  &kp LEFT  &kp DOWN     &kp UP  &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp PAUSE_BREAK  &kp HOME  &kp PG_UP  &kp PG_DN    &kp END  &trans
+ &trans    &trans    &trans     &trans     &trans          &trans  &trans  &trans  &trans  &kp ESC  &kp DEL                     &trans     &trans     &trans     &trans  &trans
             >;
         };
 
         layer_Fn {
             bindings = <
- &trans    &trans    &trans     &trans     &trans                                                                  &trans   &trans   &trans   &trans  &trans
- &trans    &trans    &trans     &trans     &trans  &trans                                                  &trans  &trans   &trans   &trans   &trans  &trans
- &trans    &trans    &trans     &trans     &trans  &trans                                                  &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans
- &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                                                  &trans  &kp F5   &kp F6   &kp F7   &kp F8  &trans
- &trans    &trans    &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F1   &kp F2   &kp F3   &kp F4  &trans
- &trans    &trans    &trans     &trans     &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans   &trans   &trans   &trans  &trans
+ &trans    &trans    &trans     &trans     &trans                                                                     &trans   &trans   &trans   &trans  &trans
+ &trans    &trans    &trans     &trans     &trans  &trans                                                     &trans  &trans   &trans   &trans   &trans  &trans
+ &trans    &trans    &trans     &trans     &trans  &trans                                                     &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans
+ &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                                                     &trans  &kp F5   &kp F6   &kp F7   &kp F8  &trans
+ &trans    &trans    &trans     &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PSCRN  &trans  &kp F1   &kp F2   &kp F3   &kp F4  &trans
+ &trans    &trans    &trans     &trans     &trans          &trans  &trans  &trans  &trans  &trans  &trans             &trans   &trans   &trans   &trans  &trans
             >;
         };
 
