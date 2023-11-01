@@ -203,7 +203,7 @@
  &trans     &trans            &trans          &trans             &trans                                                                                                    &trans             &trans            &trans            &trans  &trans
  &trans     &trans            &none           &none              &trans             &trans                                                              &trans             &trans             &trans            &trans            &trans  &trans
  &trans     &kp F11           &kp F12         &kp F13            &kp F14            &kp F15                                                            &kp F16            &kp F17            &kp F18           &kp F19           &kp F20  &trans
- &trans     &my_ht LGUI EXCL  &my_ht LALT AT  &my_ht LCTRL HASH  &my_ht LSHFT DLLR  &kp PRCNT                                                        &kp CARET  &my_ht RSHFT AMPS  &my_ht RCTRL STAR  &my_ht RALT RBRC  &my_ht RGUI LBRC  &trans
+ &trans     &my_ht LGUI EXCL  &my_ht LALT AT  &my_ht LCTRL HASH  &my_ht LSHFT DLLR  &kp PRCNT                                                        &kp CARET  &my_ht RSHFT AMPS  &my_ht RCTRL STAR  &my_ht RALT RPAR  &my_ht RGUI LPAR  &trans
  &trans     &kp COLON         &kp TILDE       &kp PIPE           &kp PLUS           &kp UNDER  &trans  &trans  &trans        &trans  &trans  &trans      &none           &kp LBRC           &kp RBRC             &none             &none  &trans
  &trans     &trans            &trans          &trans             &trans                        &trans  &trans  &trans        &trans  &trans  &trans                        &trans             &trans            &trans            &trans  &trans
             >;
