@@ -30,94 +30,7 @@
             tapping-term-ms = <200>;
             bindings = <&mo 1>, <&to 1>;
         };
-    };
-
-    macros {
-        rgb_ug_status_macro: rgb_ug_status_macro_0 {
-            label = "RGB_UG_STATUS";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&rgb_ug RGB_STATUS>;
-        };
-    };
-
-    macros {
-        bt_0: bt_profile_macro_0 {
-            label = "BT_0";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 0>;
-        };
-    };
-
-    macros {
-        bt_1: bt_profile_macro_1 {
-            label = "BT_1";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 1>;
-        };
-    };
-
-    macros {
-        bt_2: bt_profile_macro_2 {
-            label = "BT_2";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 2>;
-        };
-    };
-
-    macros {
-        bt_3: bt_profile_macro_3 {
-            label = "BT_3";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 3>;
-        };
-    };
-
-    magic: magic_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        label = "MAGIC_HOLD_TAP";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        bindings = <&mo>, <&rgb_ug_status_macro>;
-    };
-
-    /* Custom Defined Behaviors */
-    macros {
-        ps_m: powershell_macro {
-            label = "POWERSHELL_MACRO";
-            compatible = "zmk,behavior-macro";
-            wait-ms = <10>;
-            tap-ms = <10>;
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp P>
-                , <&macro_tap &kp O>
-                , <&macro_tap &kp W>
-                , <&macro_tap &kp E>
-                , <&macro_tap &kp R>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp H>
-                , <&macro_tap &kp E>
-                , <&macro_tap &kp L>
-                , <&macro_tap &kp L>
-                ;
-        };
-    };
-    behaviors {
+        // My custom behaviours
         my_ht: my_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "MY_HOLD_TAP";
@@ -138,9 +51,75 @@
             quick-tap-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
-        td_tildesc: td_tildesc {
+    };
 
-        }
+    macros {
+        rgb_ug_status_macro: rgb_ug_status_macro_0 {
+            label = "RGB_UG_STATUS";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&rgb_ug RGB_STATUS>;
+        };
+        bt_0: bt_profile_macro_0 {
+            label = "BT_0";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&out OUT_BLE>,
+                  <&bt BT_SEL 0>;
+        };
+        bt_1: bt_profile_macro_1 {
+            label = "BT_1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&out OUT_BLE>,
+                  <&bt BT_SEL 1>;
+        bt_2: bt_profile_macro_2 {
+            label = "BT_2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&out OUT_BLE>,
+                  <&bt BT_SEL 2>;
+        };
+        bt_3: bt_profile_macro_3 {
+            label = "BT_3";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&out OUT_BLE>,
+                  <&bt BT_SEL 3>;
+        };
+        ps_m: powershell_macro {
+            label = "POWERSHELL_MACRO";
+            compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
+            tap-ms = <10>;
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp P>
+                , <&macro_tap &kp O>
+                , <&macro_tap &kp W>
+                , <&macro_tap &kp E>
+                , <&macro_tap &kp R>
+                , <&macro_tap &kp S>
+                , <&macro_tap &kp H>
+                , <&macro_tap &kp E>
+                , <&macro_tap &kp L>
+                , <&macro_tap &kp L>
+                ;
+        };
+    };
+
+    magic: magic_hold_tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MAGIC_HOLD_TAP";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <200>;
+        bindings = <&mo>, <&rgb_ug_status_macro>;
     };
 
     keymap {
