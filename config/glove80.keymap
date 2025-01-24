@@ -127,12 +127,12 @@
 
         layer_Base {
             bindings = <
- &none               &none          &none           &none                &none                                                                                                        &none           &none          &none          &none       &none
- &none               &none          &none     &key_repeat                &none  &none                                                                          &none                  &none     &key_repeat          &none          &none       &none
- &kp GRAVE           &kp Q          &kp W           &kp F                &kp P  &kp V                                                                          &kp J                  &kp L           &kp U          &kp Y        &kp SQT   &kp MINUS
- &caps_word  &my_ht LGUI A  &my_ht LALT R  &my_ht LCTRL S  &my_shft_ht LSHFT T  &kp G                                                                          &kp H    &my_shft_ht RSHFT N  &my_ht RCTRL E  &my_ht RALT I  &my_ht RGUI O    &kp SEMI
- &kp BSLH            &kp Z          &kp X           &kp C                &kp D  &kp B  &lt 3 BSPC   &lt 4 RET  &kp ESC        &kp ESC  &lt 5 TAB  &lt 1 SPACE  &kp K                  &kp M       &kp COMMA        &kp DOT       &kp FSLH   &kp EQUAL
- &magic 2 0          &kp M          &kp L           &kp E                &kp N         &lt 1 SPACE  &lt 5 TAB  &kp ESC        &kp ESC  &lt 4 RET  &lt 3 BSPC                          &kp T           &kp S          &kp R          &kp A  &magic 2 0
+ &none               &none          &none           &none                &none                                                                                                            &none           &none          &none          &none       &none
+ &none               &none          &none           &none                &none      &none                                                                          &none                  &none           &none          &none          &none       &none
+ &kp GRAVE           &kp Q          &kp W           &kp F                &kp P      &kp V                                                                          &kp J                  &kp L           &kp U          &kp Y        &kp SQT   &kp MINUS
+ &caps_word  &my_ht LGUI A  &my_ht LALT R  &my_ht LCTRL S  &my_shft_ht LSHFT T      &kp G                                                                          &kp H    &my_shft_ht RSHFT N  &my_ht RCTRL E  &my_ht RALT I  &my_ht RGUI O    &kp SEMI
+ &kp BSLH            &kp Z          &kp X           &kp C                &kp D      &kp B  &lt 3 BSPC   &lt 4 RET  &kp ESC        &kp ESC  &lt 5 TAB  &lt 1 SPACE  &kp K                  &kp M       &kp COMMA        &kp DOT       &kp FSLH   &kp EQUAL
+ &magic 2 0          &kp M          &kp L           &kp E                &kp LGUI          &lt 1 SPACE  &lt 5 TAB  &kp ESC        &kp ESC  &lt 4 RET  &lt 3 BSPC                          &kp T           &kp S          &kp R          &kp A  &magic 2 0
             >;
         };
 
