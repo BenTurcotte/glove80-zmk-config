@@ -1,4 +1,3 @@
-
 /*
  * Copyright (c) 2020 The ZMK Contributors
  * Copyright (c) 2022 Innaworks Development Limited, trading as MoErgo
@@ -6,17 +5,19 @@
  * SPDX-License-Identifier: MIT
  */
 
-
 #include <behaviors.dtsi>
-/* Include all behaviour includes needed by system behaviors/macros */
-#include <dt-bindings/zmk/outputs.h>
-
-/* Include behaviour includes needed by key binds - automatically generated */
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/rgb.h>
 
+#define HYPER LC(LS(LG(LALT)))
+
+// layers
+#define DEFAULT 0
+#define LOWER 1
+#define MAGIC 2
 
 / {
     /**************************************************************************
@@ -25,13 +26,14 @@
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
-        lower: tap_dance_0 {
+        layer_td: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&to 1>;
+            bindings = <&mo LOWER>, <&to LOWER>;
         };
+
         magic: magic_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "MAGIC_HOLD_TAP";
@@ -41,6 +43,7 @@
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
     };
+
     macros {
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
             label = "RGB_UG_STATUS";
@@ -49,6 +52,7 @@
             bindings
                 = <&rgb_ug RGB_STATUS>;
         };
+
         bt_0: bt_profile_macro_0 {
             label = "BT_0";
             compatible = "zmk,behavior-macro";
@@ -57,6 +61,7 @@
                 = <&out OUT_BLE>,
                   <&bt BT_SEL 0>;
         };
+
         bt_1: bt_profile_macro_1 {
             label = "BT_1";
             compatible = "zmk,behavior-macro";
@@ -65,6 +70,7 @@
                 = <&out OUT_BLE>,
                   <&bt BT_SEL 1>;
         };
+
         bt_2: bt_profile_macro_2 {
             label = "BT_2";
             compatible = "zmk,behavior-macro";
@@ -73,6 +79,7 @@
                 = <&out OUT_BLE>,
                   <&bt BT_SEL 2>;
         };
+
         bt_3: bt_profile_macro_3 {
             label = "BT_3";
             compatible = "zmk,behavior-macro";
@@ -161,7 +168,7 @@
  &kp GRAVE           &kp Q          &kp W           &kp F                &kp P  &kp V                                                                          &kp J                  &kp L           &kp U          &kp Y        &kp SQT   &kp MINUS
  &caps_word  &my_ht LGUI A  &my_ht LALT R  &my_ht LCTRL S  &my_shft_ht LSHFT T  &kp G                                                                          &kp H    &my_shft_ht RSHFT N  &my_ht RCTRL E  &my_ht RALT I  &my_ht RGUI O    &kp SEMI
  &kp BSLH            &kp Z          &kp X           &kp C                &kp D  &kp B  &my_lt 3 BSPC   &my_lt 4 RET  &kp ESC        &kp ESC  &my_lt 5 TAB  &my_lt 1 SPACE  &kp K                  &kp M       &kp COMMA        &kp DOT       &kp FSLH   &kp EQUAL
- &magic 2 0          &kp M          &kp L           &kp E                &kp N         &my_lt 1 SPACE  &my_lt 5 TAB  &kp ESC        &kp ESC  &my_lt 4 RET  &my_lt 3 BSPC                          &kp T           &kp S          &kp R          &kp A  &magic 2 0
+ &magic MAGIC 0          &kp M          &kp L           &kp E                &kp N         &my_lt 1 SPACE  &my_lt 5 TAB  &kp ESC        &kp ESC  &my_lt 4 RET  &my_lt 3 BSPC                          &kp T           &kp S          &kp R          &kp A  &magic 2 0
             >;
         };
 
