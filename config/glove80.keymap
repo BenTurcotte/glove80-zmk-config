@@ -19,7 +19,9 @@
 
 
 / {
-    /* Glove80 system behavior & macros */
+    /**************************************************************************
+     * Glove80 system behavior & macros                                       *
+     **************************************************************************/
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
@@ -38,29 +40,7 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
-        // My custom behaviours
-        my_ht: my_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MY_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <150>;
-            require-prior-idle-ms = <75>;
-            quick-tap-ms = <100>;
-            bindings = <&kp>, <&kp>;
-        };
-        my_shft_ht: my_shift_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MY_SHIFT_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <150>;
-            require-prior-idle-ms = <75>;
-            quick-tap-ms = <100>;
-            bindings = <&kp>, <&kp>;
-        };
     };
-
     macros {
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
             label = "RGB_UG_STATUS";
@@ -101,6 +81,41 @@
                 = <&out OUT_BLE>,
                   <&bt BT_SEL 3>;
         };
+    };
+
+    /**************************************************************************
+     * Custom Defined Behaviors & Macros                                      *
+     **************************************************************************/
+    behaviors {
+        my_ht: my_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MY_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <150>;
+            quick-tap-ms = <100>;
+            bindings = <&kp>, <&kp>;
+        };
+        my_shft_ht: my_shift_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MY_SHIFT_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+            bindings = <&kp>, <&kp>;
+        };
+        my_lt: my_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <50>;
+            bindings = <&mo>, <&kp>;
+            display-name = "Layer-Tap";
+        };
+    };
+    macros {
         ps_m: powershell_macro {
             label = "POWERSHELL_MACRO";
             compatible = "zmk,behavior-macro";
@@ -120,6 +135,20 @@
                 , <&macro_tap &kp L>
                 ;
         };
+        rgb_mo_1: rgb_mo_1 {
+            label = "RGB_MO_1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_press &mo 1>
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,100)>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo 1>
+                // , <&macro_tap &rgb_ug RGB_COLOR_HSB(300,100,50)>;
+                , <&macro_tap &rgb_ug RGB_COLOR_HSB(0,0,0)>;
+        };
     };
 
     keymap {
@@ -127,12 +156,12 @@
 
         layer_Base {
             bindings = <
- &none               &none          &none           &none                &none                                                                                                            &none           &none          &none          &none       &none
- &none               &none          &none           &none                &none      &none                                                                          &none                  &none           &none          &none          &none       &none
- &kp GRAVE           &kp Q          &kp W           &kp F                &kp P      &kp V                                                                          &kp J                  &kp L           &kp U          &kp Y        &kp SQT   &kp MINUS
- &caps_word  &my_ht LGUI A  &my_ht LALT R  &my_ht LCTRL S  &my_shft_ht LSHFT T      &kp G                                                                          &kp H    &my_shft_ht RSHFT N  &my_ht RCTRL E  &my_ht RALT I  &my_ht RGUI O    &kp SEMI
- &kp LGUI            &kp Z          &kp X           &kp C                &kp D      &kp B  &lt 3 BSPC   &lt 4 RET  &kp ESC        &kp ESC  &lt 5 TAB  &lt 1 SPACE  &kp K                  &kp M       &kp COMMA        &kp DOT       &kp FSLH   &kp EQUAL
- &magic 2 0          &kp M          &kp L           &kp E                &kp LGUI          &lt 1 SPACE  &lt 5 TAB  &kp ESC        &kp ESC  &lt 4 RET  &lt 3 BSPC                          &kp T           &kp S          &kp R          &kp A  &magic 2 0
+ &none               &none          &none           &none                &none                                                                                                        &none           &none          &none          &none       &none
+ &none               &kp F1         &kp F2          &kp F3               &kp F4 &none                                                                          &none                  &none     &key_repeat          &none          &none       &none
+ &kp GRAVE           &kp Q          &kp W           &kp F                &kp P  &kp V                                                                          &kp J                  &kp L           &kp U          &kp Y        &kp SQT   &kp MINUS
+ &caps_word  &my_ht LGUI A  &my_ht LALT R  &my_ht LCTRL S  &my_shft_ht LSHFT T  &kp G                                                                          &kp H    &my_shft_ht RSHFT N  &my_ht RCTRL E  &my_ht RALT I  &my_ht RGUI O    &kp SEMI
+ &kp BSLH            &kp Z          &kp X           &kp C                &kp D  &kp B  &my_lt 3 BSPC   &my_lt 4 RET  &kp ESC        &kp ESC  &my_lt 5 TAB  &my_lt 1 SPACE  &kp K                  &kp M       &kp COMMA        &kp DOT       &kp FSLH   &kp EQUAL
+ &magic 2 0          &kp M          &kp L           &kp E                &kp N         &my_lt 1 SPACE  &my_lt 5 TAB  &kp ESC        &kp ESC  &my_lt 4 RET  &my_lt 3 BSPC                          &kp T           &kp S          &kp R          &kp A  &magic 2 0
             >;
         };
 
@@ -160,12 +189,12 @@
 
         layer_Num {
             bindings = <
- &none      &none           &none           &none            &none                                                                                               &none            &none           &none           &none   &none
- &none      &none           &none           &none            &none            &none                                                             &none            &none            &none           &none           &none   &none
- &trans     &kp F1          &kp F2          &kp F3           &kp F4           &kp F5                                                           &kp F6           &kp F7           &kp F8          &kp F9         &kp F10  &trans
- &trans     &my_ht LGUI N1  &my_ht LALT N2  &my_ht LCTRL N3  &my_ht LSHFT N4  &kp N5                                                           &kp N6  &my_ht RSHFT N7  &my_ht RCTRL N8  &my_ht RALT N9  &my_ht RGUI N0  &trans
- &trans     &kp LBKT        &kp RBKT        &kp GRAVE        &kp SEMI         &kp BSLH  &trans     &trans     &trans  &trans  &trans  &trans   &none            &trans           &trans          &trans          &trans  &trans
- &trans     &trans          &trans          &trans           &trans                     &kp MINUS  &kp EQUAL  &trans  &trans  &trans  &trans                    &trans           &trans          &trans          &trans  &trans
+ &trans  &trans          &trans          &trans           &trans                                                                                                  &trans           &trans          &trans          &trans  &trans
+ &trans  &kp F1          &kp F2          &kp F3           &kp F4           &kp F5                                                                &kp F6           &kp F7           &kp F8          &kp F9         &kp F10  &trans
+ &trans  &kp F1          &kp F2          &kp F3           &kp F4           &kp F5                                                                &kp F6           &kp F7           &kp F8          &kp F9         &kp F10  &trans
+ &trans  &my_ht LGUI N1  &my_ht LALT N2  &my_ht LCTRL N3  &my_ht LSHFT N4  &kp N5                                                                &kp N6  &my_ht RSHFT N7  &my_ht RCTRL N8  &my_ht RALT N9  &my_ht RGUI N0  &trans
+ &trans  &kp LBKT        &kp RBKT        &kp GRAVE        &kp SEMI         &kp BSLH  &kp UNDER  &kp PLUS   &trans        &trans  &trans  &trans   &none           &none            &trans          &trans          &trans  &trans
+ &trans  &trans          &trans          &trans           &trans                     &kp MINUS  &kp EQUAL  &trans        &trans  &trans  &trans                   &trans           &trans          &trans          &trans  &trans
             >;
         };
 
