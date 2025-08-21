@@ -57,7 +57,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MY_SHIFT_HOLD_TAP";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
