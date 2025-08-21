@@ -58,7 +58,7 @@
             label = "MY_SHIFT_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <100>;
+            tapping-term-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
         my_lt: my_layer_tap {
