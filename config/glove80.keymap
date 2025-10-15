@@ -27,11 +27,8 @@
         #binding-cells = <0>; \
         bindings = < \
             &macro_press &kp LSHFT \
-            &macro_delay_ms 15 \
-            &macro_press &kp KEY \
-            &macro_delay_ms 15 \
-            &macro_release &kp KEY \
-            &macro_delay_ms 15 \
+            &macro_wait_time 30 \
+            &macro_tap &kp KEY \
             &macro_release &kp LSHFT \
         >; \
     };
