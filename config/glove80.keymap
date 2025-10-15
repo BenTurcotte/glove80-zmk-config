@@ -25,12 +25,11 @@
         label = #NAME; \
         compatible = "zmk,behavior-macro"; \
         #binding-cells = <0>; \
-        bindings = < \
-            &macro_press &kp LSHFT \
-            &macro_wait_time 30 \
-            &macro_tap &kp KEY \
-            &macro_release &kp LSHFT \
-        >; \
+        bindings \
+            = <&macro_press &kp LSHFT> \
+            , <&macro_tap &kp KEY> \
+            , <&macro_release &kp LSHFT> \
+            ; \
     };
 
 / {
