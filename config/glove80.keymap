@@ -83,6 +83,12 @@
             bindings = <&mo>, <&kp>;
             display-name = "Layer-Tap";
         };
+        tap_macro: tap_macro {
+            compatible = "zmk,behavior-tap";
+            label = "TAP_MACRO";
+            #binding-cells = <1>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -237,9 +243,9 @@
  &trans  &trans                            &trans                        &trans                      &trans                                                                                                                                       &trans                          &trans                           &trans                            &trans  &trans
  &none   &none                             &none                         &none                       &none                         &none                                                                          &none                            &none                           &none                            &none                             &none   &none
  &trans  &kp F11                           &kp F12                       &kp F13                     &kp F14                       &kp F15                                                                      &kp F16                          &kp F17                         &kp F18                          &kp F19                           &kp F20  &trans
- &trans  &my_ht &kp LGUI &mcr_exclamation  &my_ht &kp LALT &mcr_at_sign  &my_ht &kp LCTRL &mcr_hash  &my_ht &kp LSHFT &mcr_dollar  &mcr_percent                                                              &mcr_caret  &my_ht &kp RSHFT &mcr_ampersand  &my_ht &kp RCTRL &mcr_asterisk  &my_ht &kp RALT &mcr_paren_left  &my_ht &kp RGUI &mcr_paren_right  &trans
- &trans  &mcr_brace_left                   &mcr_brace_right              &mcr_tilde                  &mcr_colon                    &mcr_pipe     &trans           &trans     &trans  &trans  &trans  &trans       &none                           &trans                          &trans                           &trans                            &trans  &trans
- &trans  &trans            &trans          &trans                        &trans                                                                  &mcr_underscore  &mcr_plus  &trans  &trans  &trans  &trans                                       &trans                          &trans                           &trans                            &trans  &trans
+ &trans  &my_ht &kp LGUI &tap_macro &mcr_exclamation  &my_ht &kp LALT &tap_macro &mcr_at_sign  &my_ht &kp LCTRL &tap_macro &mcr_hash  &my_ht &kp LSHFT &tap_macro &mcr_dollar  &tap_macro &mcr_percent                                                              &tap_macro &mcr_caret  &my_ht &kp RSHFT &tap_macro &mcr_ampersand  &my_ht &kp RCTRL &tap_macro &mcr_asterisk  &my_ht &kp RALT &tap_macro &mcr_paren_left  &my_ht &kp RGUI &tap_macro &mcr_paren_right  &trans
+ &trans  &tap_macro &mcr_brace_left                   &tap_macro &mcr_brace_right              &tap_macro &mcr_tilde                  &tap_macro &mcr_colon                    &tap_macro &mcr_pipe     &trans           &trans     &trans  &trans  &trans  &trans       &none                           &trans                          &trans                           &trans                            &trans  &trans
+ &trans  &trans            &trans          &trans                        &trans                                                                  &tap_macro &mcr_underscore  &tap_macro &mcr_plus  &trans  &trans  &trans  &trans                                       &trans                          &trans                           &trans                            &trans  &trans
             >;
         };
 
