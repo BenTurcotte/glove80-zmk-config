@@ -183,104 +183,88 @@
             label = "Shifted Tap excl";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp LSFT
-                &wait-ms 20
-                &kp N1
-                &wait-ms 20
-                &kp LSFT UP
-            >;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp N1>
+                , <&macro_release &kp LSFT>
+                ;
         };
 
         my_at: my_at {
             label = "Shifted Tap at";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp LSFT
-                &wait-ms 20
-                &kp N2
-                &wait-ms 20
-                &kp LSFT UP
-            >;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp N2>
+                , <&macro_release &kp LSFT>
+                ;
         };
 
         my_lpar: my_lpar {
             label = "Shifted Tap lpar";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp LSFT
-                &wait-ms 20
-                &kp N9
-                &wait-ms 20
-                &kp LSFT UP
-            >;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp N9>
+                , <&macro_release &kp LSFT>
+                ;
         };
 
         my_rpar: my_rpar {
             label = "Shifted Tap rpar";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp LSFT
-                &wait-ms 20
-                &kp N0
-                &wait-ms 20
-                &kp LSFT UP
-            >;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp N0>
+                , <&macro_release &kp LSFT>
+                ;
         };
 
         my_under: my_under {
             label = "Shifted Tap under";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp LSFT
-                &wait-ms 20
-                &kp MINUS
-                &wait-ms 20
-                &kp LSFT UP
-            >;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp MINUS>
+                , <&macro_release &kp LSFT>
+                ;
         };
 
         my_plus: my_plus {
             label = "Shifted Tap plus";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp LSFT
-                &wait-ms 20
-                &kp EQUAL
-                &wait-ms 20
-                &kp LSFT UP
-            >;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp EQUAL>
+                , <&macro_release &kp LSFT>
+                ;
         };
 
         my_qustion: my_qustion {
             label = "Shifted Tap qustion";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp LSFT
-                &wait-ms 20
-                &kp SLASH
-                &wait-ms 20
-                &kp LSFT UP
-            >;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp SLASH>
+                , <&macro_release &kp LSFT>
+                ;
         };
 
         my_tilde: my_tilde {
             label = "Shifted Tap tilde";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp LSFT
-                &wait-ms 20
-                &kp GRAVE
-                &wait-ms 20
-                &kp LSFT UP
-            >;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp GRAVE>
+                , <&macro_release &kp LSFT>
+                ;
         };
     };
 
