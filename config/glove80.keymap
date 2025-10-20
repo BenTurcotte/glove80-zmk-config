@@ -21,16 +21,16 @@
 
 // Shift macro to fix RDP issue of shifted keycodes being registered as their un-shifted couterparts
 #define SHIFTED_TAP(NAME, KEY) \
-    my_##NAME: my_##NAME { \
-        label = "Shifted Tap " #NAME; \
-        compatible = "zmk,behavior-macro"; \
-        #binding-cells = <0>; \
-        bindings = \
-            = <&macro_press &kp LSHFT> \
-            , <&macro_tap &kp KEY> \
-            , <&macro_release &kp LSHFT> \
-            ; \
-    };
+        my_##NAME: my_##NAME { \
+            label = "Shifted Tap " #NAME; \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            bindings = \
+                = <&macro_press &kp LSHFT> \
+                , <&macro_tap &kp KEY> \
+                , <&macro_release &kp LSHFT> \
+                ; \
+        }
 
 / {
     /**************************************************************************
@@ -144,28 +144,28 @@
         // ----------------------------------------
         // My custom macros
         //
-        SHIFTED_TAP(excl, N1)
-        SHIFTED_TAP(at, N2)
-        SHIFTED_TAP(hash, N3)
-        SHIFTED_TAP(dllr, N4)
-        SHIFTED_TAP(pcnt, N5)
-        SHIFTED_TAP(caret, N6)
-        SHIFTED_TAP(amp, N7)
-        SHIFTED_TAP(star, N8)
-        SHIFTED_TAP(lpar, N9)
-        SHIFTED_TAP(rpar, N0)
+        SHIFTED_TAP(excl, N1);
+        SHIFTED_TAP(at, N2);
+        SHIFTED_TAP(hash, N3);
+        SHIFTED_TAP(dllr, N4);
+        SHIFTED_TAP(pcnt, N5);
+        SHIFTED_TAP(caret, N6);
+        SHIFTED_TAP(amp, N7);
+        SHIFTED_TAP(star, N8);
+        SHIFTED_TAP(lpar, N9);
+        SHIFTED_TAP(rpar, N0);
         
-        SHIFTED_TAP(under, MINUS)
-        SHIFTED_TAP(plus, EQUAL)
-        SHIFTED_TAP(lbrc, LBKT)
-        SHIFTED_TAP(rbrc, RBKT)
-        SHIFTED_TAP(pipe, BSLH)
-        SHIFTED_TAP(colon, SEMI)
-        SHIFTED_TAP(quote, APOS)
-        SHIFTED_TAP(lt, COMMA)
-        SHIFTED_TAP(gt, DOT)
-        SHIFTED_TAP(question, SLASH)
-        SHIFTED_TAP(tilde, GRAVE)
+        SHIFTED_TAP(under, MINUS);
+        SHIFTED_TAP(plus, EQUAL);
+        SHIFTED_TAP(lbrc, LBKT);
+        SHIFTED_TAP(rbrc, RBKT);
+        SHIFTED_TAP(pipe, BSLH);
+        SHIFTED_TAP(colon, SEMI);
+        SHIFTED_TAP(quote, APOS);
+        SHIFTED_TAP(lt, COMMA);
+        SHIFTED_TAP(gt, DOT);
+        SHIFTED_TAP(question, SLASH);
+        SHIFTED_TAP(tilde, GRAVE);
 
         ps_m: powershell_macro {
             label = "POWERSHELL_MACRO";
