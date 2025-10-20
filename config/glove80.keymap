@@ -20,12 +20,12 @@
 #define MAGIC 2
 
 // Shift macro to fix RDP issue of shifted keycodes being registered as their un-shifted couterparts
-#define MACRO_SHIFTED(NAME, KEY) \
-    mcr_##NAME: mcr_##NAME { \
-        label = #NAME; \
+#define SHIFTED_TAP(NAME, KEY) \
+    my_##NAME: my_##NAME { \
+        label = "Shifted Tap " #NAME; \
         compatible = "zmk,behavior-macro"; \
         #binding-cells = <0>; \
-        bindings \
+        bindings = \
             = <&macro_press &kp LSHFT> \
             , <&macro_tap &kp KEY> \
             , <&macro_release &kp LSHFT> \
@@ -37,6 +37,9 @@
      * Glove80 system behavior & macros                                       *
      **************************************************************************/
     behaviors {
+        // ----------------------------------------
+        // MoErgo's custom behaviors
+        //
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
         layer_td: tap_dance_0 {
@@ -55,7 +58,9 @@
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
 
-        // Custom Defined Behaviors & Macros
+        // ----------------------------------------
+        // My custom behaviors
+        //
         my_ht: my_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "MY_HOLD_TAP";
@@ -83,15 +88,19 @@
             bindings = <&mo>, <&kp>;
             display-name = "Layer-Tap";
         };
-        tap_macro: tap_macro {
-            compatible = "zmk,behavior-tap";
-            label = "TAP_MACRO";
-            #binding-cells = <1>;
+        modded_ht: modded_hold_tap {
+            compatible = "zmk,behavior-modded-hold-tap";
+            label = "MODDED_HT";
+            #binding-cells = <3>;
             tapping-term-ms = <200>;
+            flavor = "balanced";
         };
     };
 
     macros {
+        // ----------------------------------------
+        // MoErgo's custom macros
+        //
         rgb_ug_status_macro: rgb_ug_status_macro_0 {
             label = "RGB_UG_STATUS";
             compatible = "zmk,behavior-macro";
@@ -131,30 +140,32 @@
                 = <&out OUT_BLE>,
                   <&bt BT_SEL 3>;
         };
-
-        // My custom macros
-        MACRO_SHIFTED(exclamation, N1)
-        MACRO_SHIFTED(at_sign, N2)
-        MACRO_SHIFTED(hash, N3)
-        MACRO_SHIFTED(dollar, N4)
-        MACRO_SHIFTED(percent, N5)
-        MACRO_SHIFTED(caret, N6)
-        MACRO_SHIFTED(ampersand, N7)
-        MACRO_SHIFTED(asterisk, N8)
-        MACRO_SHIFTED(paren_left, N9)
-        MACRO_SHIFTED(paren_right, N0)
         
-        MACRO_SHIFTED(underscore, MINUS)
-        MACRO_SHIFTED(plus, EQUAL)
-        MACRO_SHIFTED(brace_left, LBKT)
-        MACRO_SHIFTED(brace_right, RBKT)
-        MACRO_SHIFTED(pipe, BSLH)
-        MACRO_SHIFTED(colon, SEMI)
-        MACRO_SHIFTED(quote, APOS)
-        MACRO_SHIFTED(less_than, COMMA)
-        MACRO_SHIFTED(greater_than, DOT)
-        MACRO_SHIFTED(question, SLASH)
-        MACRO_SHIFTED(tilde, GRAVE)
+        // ----------------------------------------
+        // My custom macros
+        //
+        SHIFTED_TAP(excl, N1)
+        SHIFTED_TAP(at, N2)
+        SHIFTED_TAP(hash, N3)
+        SHIFTED_TAP(dllr, N4)
+        SHIFTED_TAP(pcnt, N5)
+        SHIFTED_TAP(caret, N6)
+        SHIFTED_TAP(amp, N7)
+        SHIFTED_TAP(star, N8)
+        SHIFTED_TAP(lpar, N9)
+        SHIFTED_TAP(rpar, N0)
+        
+        SHIFTED_TAP(under, MINUS)
+        SHIFTED_TAP(plus, EQUAL)
+        SHIFTED_TAP(lbrc, LBKT)
+        SHIFTED_TAP(rbrc, RBKT)
+        SHIFTED_TAP(pipe, BSLH)
+        SHIFTED_TAP(colon, SEMI)
+        SHIFTED_TAP(quote, APOS)
+        SHIFTED_TAP(lt, COMMA)
+        SHIFTED_TAP(gt, DOT)
+        SHIFTED_TAP(question, SLASH)
+        SHIFTED_TAP(tilde, GRAVE)
 
         ps_m: powershell_macro {
             label = "POWERSHELL_MACRO";
@@ -240,12 +251,12 @@
 
         layer_Sym {
             bindings = <
- &trans  &trans                            &trans                        &trans                      &trans                                                                                                                                       &trans                          &trans                           &trans                            &trans  &trans
- &none   &none                             &none                         &none                       &none                         &none                                                                          &none                            &none                           &none                            &none                             &none   &none
- &trans  &kp F11                           &kp F12                       &kp F13                     &kp F14                       &kp F15                                                                      &kp F16                          &kp F17                         &kp F18                          &kp F19                           &kp F20  &trans
- &trans  &my_ht &kp LGUI &tap_macro &mcr_exclamation  &my_ht &kp LALT &tap_macro &mcr_at_sign  &my_ht &kp LCTRL &tap_macro &mcr_hash  &my_ht &kp LSHFT &tap_macro &mcr_dollar  &tap_macro &mcr_percent                                                              &tap_macro &mcr_caret  &my_ht &kp RSHFT &tap_macro &mcr_ampersand  &my_ht &kp RCTRL &tap_macro &mcr_asterisk  &my_ht &kp RALT &tap_macro &mcr_paren_left  &my_ht &kp RGUI &tap_macro &mcr_paren_right  &trans
- &trans  &tap_macro &mcr_brace_left                   &tap_macro &mcr_brace_right              &tap_macro &mcr_tilde                  &tap_macro &mcr_colon                    &tap_macro &mcr_pipe     &trans           &trans     &trans  &trans  &trans  &trans       &none                           &trans                          &trans                           &trans                            &trans  &trans
- &trans  &trans            &trans          &trans                        &trans                                                                  &tap_macro &mcr_underscore  &tap_macro &mcr_plus  &trans  &trans  &trans  &trans                                       &trans                          &trans                           &trans                            &trans  &trans
+ &trans  &trans                    &trans                    &trans                     &trans                                                                                                                    &trans                     &trans                    &trans                    &trans  &trans
+ &none   &none                     &none                     &none                      &none                      &none                                                                &none                      &none                      &none                     &none                     &none   &none
+ &trans  &kp F11                   &kp F12                   &kp F13                    &kp F14                    &kp F15                                                            &kp F16                    &kp F17                    &kp F18                   &kp F19                   &kp F20  &trans
+ &trans  &modded_ht LGUI LSHFT N1  &modded_ht LALT LSHFT N2  &modded_ht LCTRL LSHFT N3  &modded_ht LSHFT LSHFT N4  &my_pcnt                                                         &my_caret  &modded_ht RSHFT LSHFT N7  &modded_ht RCTRL LSHFT N8  &modded_ht RALT LSHFT N9  &modded_ht RGUI LSHFT N0  &trans
+ &trans  &my_lbrc                  &my_rbrc                  &my_tilde                  &my_colon                  &my_pipe  &trans     &trans    &trans    &trans  &trans  &trans      &none                     &trans                     &trans                    &trans                    &trans  &trans
+ &trans  &trans                    &trans                    &trans                     &trans                               &my_under  &my_plus  &trans    &trans  &trans  &trans                                &trans                     &trans                    &trans                    &trans  &trans
             >;
         };
 
