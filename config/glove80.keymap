@@ -179,7 +179,7 @@
         };
         
         // Custom "shifted" symbols macros
-        my_excl: my_excl {
+        shft_excl_shft: shft_excl_shft {
             label = "Shifted Tap excl";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -190,7 +190,7 @@
                 ;
         };
 
-        my_at: my_at {
+        shft_at_shft: shft_at_shft {
             label = "Shifted Tap at";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -201,7 +201,7 @@
                 ;
         };
 
-        my_hash: my_hash {
+        shft_hash_shft: shft_hash_shft {
             label = "Shifted Tap hash";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -212,7 +212,7 @@
                 ;
         };
 
-        my_dllr: my_dllr {
+        shft_dllr_shft: shft_dllr_shft {
             label = "Shifted Tap dollar";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -223,7 +223,7 @@
                 ;
         };
 
-        my_pcnt: my_pcnt {
+        shft_pcnt_shft: shft_pcnt_shft {
             label = "Shifted Tap percent";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -234,7 +234,7 @@
                 ;
         };
 
-        my_caret: my_caret {
+        shft_caret_shft: shft_caret_shft {
             label = "Shifted Tap caret";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -245,7 +245,7 @@
                 ;
         };
 
-        my_amp: my_amp {
+        shft_amp_shft: shft_amp_shft {
             label = "Shifted Tap ampersand";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -256,7 +256,7 @@
                 ;
         };
 
-        my_astrk: my_astrk {
+        shft_astrk_shft: shft_astrk_shft {
             label = "Shifted Tap asterisk";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -267,7 +267,7 @@
                 ;
         };
 
-        my_lpar: my_lpar {
+        shft_lpar_shft: shft_lpar_shft {
             label = "Shifted Tap left parenthesis";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -278,7 +278,7 @@
                 ;
         };
 
-        my_rpar: my_rpar {
+        shft_rpar_shft: shft_rpar_shft {
             label = "Shifted Tap right parenthesis";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -289,7 +289,7 @@
                 ;
         };
 
-        my_under: my_under {
+        shft_under_shft: shft_under_shft {
             label = "Shifted Tap underscore";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -300,7 +300,7 @@
                 ;
         };
 
-        my_plus: my_plus {
+        shft_plus_shft: shft_plus_shft {
             label = "Shifted Tap plus";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -311,7 +311,7 @@
                 ;
         };
 
-        my_lthan: my_lthan {
+        shft_lthan_shft: shft_lthan_shft {
             label = "Shifted Tap less-than symbol";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -322,7 +322,7 @@
                 ;
         };
 
-        my_gthan: my_gthan {
+        shft_gthan_shft: shft_gthan_shft {
             label = "Shifted Tap greater-than symbol";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -333,7 +333,7 @@
                 ;
         };
 
-        my_qmark: my_qmark {
+        shft_qmark_shft: shft_qmark_shft {
             label = "Shifted Tap qustion mark";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -344,7 +344,7 @@
                 ;
         };
 
-        my_dqt: my_dqt {
+        shft_dqt_shft: shft_dqt_shft {
             label = "Shifted Tap double-quote";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -355,7 +355,7 @@
                 ;
         };
 
-        my_pipe: my_pipe {
+        shft_pipe_shft: shft_pipe_shft {
             label = "Shifted Tap pipe";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -366,7 +366,7 @@
                 ;
         };
 
-        my_colon: my_colon {
+        shft_colon_shft: shft_colon_shft {
             label = "Shifted Tap colon";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -377,7 +377,7 @@
                 ;
         };
 
-        my_tilde: my_tilde {
+        shft_tilde_shft: shft_tilde_shft {
             label = "Shifted Tap tilde";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -388,7 +388,7 @@
                 ;
         };
 
-        my_rbrc: my_rbrc {
+        shft_rbrc_shft: shft_rbrc_shft {
             label = "Shifted Tap right-brace";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -399,7 +399,7 @@
                 ;
         };
 
-        my_lbrc: my_lbrc {
+        shft_lbrc_shft: shft_lbrc_shft {
             label = "Shifted Tap left-brace";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -460,12 +460,12 @@
 
         layer_Sym {
             bindings = <
- &trans  &trans                    &trans                    &trans                     &trans                                                                                                                    &trans                     &trans                    &trans                    &trans  &trans
- &none   &none                     &none                     &none                      &none                      &none                                                                &none                      &none                      &none                     &none                     &none   &none
- &trans  &kp F11                   &kp F12                   &kp F13                    &kp F14                    &kp F15                                                            &kp F16                    &kp F17                    &kp F18                   &kp F19                   &kp F20  &trans
- &trans  &modded_ht LGUI LSHFT N1  &modded_ht LALT LSHFT N2  &modded_ht LCTRL LSHFT N3  &modded_ht LSHFT LSHFT N4  &my_pcnt                                                         &my_caret  &modded_ht RSHFT LSHFT N7  &modded_ht RCTRL LSHFT N8  &modded_ht RALT LSHFT N9  &modded_ht RGUI LSHFT N0  &trans
- &trans  &my_lbrc                  &my_rbrc                  &my_tilde                  &my_colon                  &my_pipe  &trans     &trans    &trans    &trans  &trans  &trans      &none                     &trans                  &my_lthan                 &my_gthan                 &my_qmark  &trans
- &trans  &trans                    &trans                    &trans                     &trans                               &my_under  &my_plus  &trans    &trans  &trans  &trans                                &trans                     &trans                    &trans                    &trans  &trans
+ &trans  &trans                    &trans                    &trans                     &trans                                                                                                                                  &trans                     &trans                    &trans                    &trans  &trans
+ &none   &none                     &none                     &none                      &none                      &none                                                                              &none                      &none                      &none                     &none                     &none   &none
+ &trans  &kp F11                   &kp F12                   &kp F13                    &kp F14                    &kp F15                                                                          &kp F16                    &kp F17                    &kp F18                   &kp F19                   &kp F20  &trans
+ &trans  &modded_ht LGUI LSHFT N1  &modded_ht LALT LSHFT N2  &modded_ht LCTRL LSHFT N3  &modded_ht LSHFT LSHFT N4  &shft_pcnt_shft                                                         &shft_caret_shft  &modded_ht RSHFT LSHFT N7  &modded_ht RCTRL LSHFT N8  &modded_ht RALT LSHFT N9  &modded_ht RGUI LSHFT N0  &trans
+ &trans  &shft_lbrc_shft           &shft_rbrc_shft           &shft_tilde_shft           &shft_colon_shft           &shft_pipe_shft  &trans     &trans    &trans    &trans  &trans  &trans             &none                     &trans           &shft_lthan_shft          &shft_gthan_shft          &shft_qmark_shft  &trans
+ &trans  &trans                    &trans                    &trans                     &trans                                      &my_under  &my_plus  &trans    &trans  &trans  &trans                                       &trans                     &trans                    &trans                    &trans  &trans
             >;
         };
 
