@@ -449,12 +449,12 @@
 
         layer_Num {
             bindings = <
- &trans  &trans          &trans          &trans           &trans                                                                                                  &trans           &trans          &trans          &trans  &trans
- &trans  &kp F1          &kp F2          &kp F3           &kp F4           &kp F5                                                                &kp F6           &kp F7           &kp F8          &kp F9         &kp F10  &trans
- &trans  &kp F1          &kp F2          &kp F3           &kp F4           &kp F5                                                                &kp F6           &kp F7           &kp F8          &kp F9         &kp F10  &trans
- &trans  &my_ht LGUI N1  &my_ht LALT N2  &my_ht LCTRL N3  &my_ht LSHFT N4  &kp N5                                                                &kp N6  &my_ht RSHFT N7  &my_ht RCTRL N8  &my_ht RALT N9  &my_ht RGUI N0  &trans
- &trans  &kp LBKT        &kp RBKT        &kp GRAVE        &kp SEMI         &kp BSLH  &my_under  &my_plus   &trans        &trans  &trans  &trans   &none           &none            &trans          &trans          &trans  &trans
- &trans  &trans          &trans          &trans           &trans                     &kp MINUS  &kp EQUAL  &trans        &trans  &trans  &trans                   &trans           &trans          &trans          &trans  &trans
+ &trans  &trans          &trans          &trans           &trans                                                                                                           &trans           &trans          &trans          &trans  &trans
+ &trans  &kp F1          &kp F2          &kp F3           &kp F4           &kp F5                                                                         &kp F6           &kp F7           &kp F8          &kp F9         &kp F10  &trans
+ &trans  &kp F1          &kp F2          &kp F3           &kp F4           &kp F5                                                                         &kp F6           &kp F7           &kp F8          &kp F9         &kp F10  &trans
+ &trans  &my_ht LGUI N1  &my_ht LALT N2  &my_ht LCTRL N3  &my_ht LSHFT N4  &kp N5                                                                         &kp N6  &my_ht RSHFT N7  &my_ht RCTRL N8  &my_ht RALT N9  &my_ht RGUI N0  &trans
+ &trans  &kp LBKT        &kp RBKT        &kp GRAVE        &kp SEMI         &kp BSLH  &shft_under_shft  &shft_plus_shft  &trans    &trans  &trans  &trans   &none            &none           &trans          &trans          &trans  &trans
+ &trans  &trans          &trans          &trans           &trans                     &kp MINUS         &kp EQUAL        &trans    &trans  &trans  &trans                   &trans           &trans          &trans          &trans  &trans
             >;
         };
 
