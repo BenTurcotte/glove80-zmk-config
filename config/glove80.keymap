@@ -201,8 +201,74 @@
                 ;
         };
 
+        my_hash: my_hash {
+            label = "Shifted Tap hash";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp N3>
+                , <&macro_release &kp LSFT>
+                ;
+        };
+
+        my_dllr: my_dllr {
+            label = "Shifted Tap dollar";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp N4>
+                , <&macro_release &kp LSFT>
+                ;
+        };
+
+        my_pcnt: my_pcnt {
+            label = "Shifted Tap percent";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp N5>
+                , <&macro_release &kp LSFT>
+                ;
+        };
+
+        my_caret: my_caret {
+            label = "Shifted Tap caret";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp N6>
+                , <&macro_release &kp LSFT>
+                ;
+        };
+
+        my_amp: my_amp {
+            label = "Shifted Tap ampersand";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp N7>
+                , <&macro_release &kp LSFT>
+                ;
+        };
+
+        my_astrk: my_astrk {
+            label = "Shifted Tap asterisk";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp N8>
+                , <&macro_release &kp LSFT>
+                ;
+        };
+
         my_lpar: my_lpar {
-            label = "Shifted Tap lpar";
+            label = "Shifted Tap left parenthesis";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -213,7 +279,7 @@
         };
 
         my_rpar: my_rpar {
-            label = "Shifted Tap rpar";
+            label = "Shifted Tap right parenthesis";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -224,7 +290,7 @@
         };
 
         my_under: my_under {
-            label = "Shifted Tap under";
+            label = "Shifted Tap underscore";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -245,13 +311,68 @@
                 ;
         };
 
-        my_qustion: my_qustion {
-            label = "Shifted Tap qustion";
+        my_lt: my_lt {
+            label = "Shifted Tap less-than symbol";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp COMMA>
+                , <&macro_release &kp LSFT>
+                ;
+        };
+
+        my_gt: my_gt {
+            label = "Shifted Tap greater-than symbol";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp DOT>
+                , <&macro_release &kp LSFT>
+                ;
+        };
+
+        my_qmark: my_qmark {
+            label = "Shifted Tap qustion mark";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSFT>
                 , <&macro_tap &kp SLASH>
+                , <&macro_release &kp LSFT>
+                ;
+        };
+
+        my_dqt: my_dqt {
+            label = "Shifted Tap double-quote";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_release &kp LSFT>
+                ;
+        };
+
+        my_pipe: my_pipe {
+            label = "Shifted Tap pipe";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp BSLH>
+                , <&macro_release &kp LSFT>
+                ;
+        };
+
+        my_colon: my_colon {
+            label = "Shifted Tap colon";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp SEMI>
                 , <&macro_release &kp LSFT>
                 ;
         };
@@ -266,6 +387,28 @@
                 , <&macro_release &kp LSFT>
                 ;
         };
+
+        my_rbrc: my_rbrc {
+            label = "Shifted Tap right-brace";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp RBKT>
+                , <&macro_release &kp LSFT>
+                ;
+        };
+
+        my_lbrc: my_lbrc {
+            label = "Shifted Tap left-brace";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSFT>
+                , <&macro_tap &kp LBKT>
+                , <&macro_release &kp LSFT>
+                ;
+        };
     };
 
     keymap {
@@ -273,34 +416,34 @@
 
         layer_Base {
             bindings = <
- &none               &none          &none           &none                &none                                                                                                        &none           &none          &none          &none       &none
- &none               &kp F1         &kp F2          &kp F3               &kp F4 &none                                                                          &none                  &none     &key_repeat          &none          &none       &none
- &kp GRAVE           &kp Q          &kp W           &kp F                &kp P  &kp V                                                                          &kp J                  &kp L           &kp U          &kp Y        &kp SQT   &kp MINUS
- &caps_word  &my_ht LGUI A  &my_ht LALT R  &my_ht LCTRL S  &my_shft_ht LSHFT T  &kp G                                                                          &kp H    &my_shft_ht RSHFT N  &my_ht RCTRL E  &my_ht RALT I  &my_ht RGUI O    &kp SEMI
- &kp BSLH            &kp Z          &kp X           &kp C                &kp D  &kp B  &my_lt 3 BSPC   &my_lt 4 RET  &kp ESC        &kp ESC  &my_lt 5 TAB  &my_lt 1 SPACE  &kp K                  &kp M       &kp COMMA        &kp DOT       &kp FSLH   &kp EQUAL
- &magic MAGIC 0          &kp M          &kp L           &kp E                &kp N         &my_lt 1 SPACE  &my_lt 5 TAB  &kp ESC        &kp ESC  &my_lt 4 RET  &my_lt 3 BSPC                          &kp T           &kp S          &kp R          &kp A  &magic 2 0
+ &none           &none          &none          &none           &none                                                                                                                                  &none           &none          &none          &none       &none
+ &none           &kp F1         &kp F2         &kp F3          &kp F4               &none                                                                                      &none                  &none     &key_repeat          &none          &none       &none
+ &kp GRAVE       &kp Q          &kp W          &kp F           &kp P                &kp V                                                                                      &kp J                  &kp L           &kp U          &kp Y        &kp SQT   &kp MINUS
+ &caps_word      &my_ht LGUI A  &my_ht LALT R  &my_ht LCTRL S  &my_shft_ht LSHFT T  &kp G                                                                                      &kp H    &my_shft_ht RSHFT N  &my_ht RCTRL E  &my_ht RALT I  &my_ht RGUI O    &kp SEMI
+ &kp BSLH        &kp Z          &kp X          &kp C           &kp D                &kp B  &my_lt 3 BSPC   &my_lt 4 RET  &kp ESC        &kp ESC  &my_lt 5 TAB  &my_lt 1 SPACE  &kp K                  &kp M       &kp COMMA        &kp DOT       &kp FSLH   &kp EQUAL
+ &magic MAGIC 0  &kp M          &kp L          &kp E           &kp N                       &my_lt 1 SPACE  &my_lt 5 TAB  &kp ESC        &kp ESC  &my_lt 4 RET  &my_lt 3 BSPC                          &kp T           &kp S          &kp R          &kp A  &magic 2 0
             >;
         };
 
         layer_Nav {
             bindings = <
- &trans  &trans    &trans    &trans     &trans                                                                                 &trans           &trans     &trans     &trans  &trans
- &trans  &trans    &trans    &trans     &trans     &trans                                                            &trans    &trans           &trans     &trans     &trans  &trans
- &trans  &trans    &trans    &trans     &trans     &trans                                                         &kp PSCRN  &kp SLCK  &kp PAUSE_BREAK    &kp INS    &kp DEL  &trans
- &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                                                          &kp CAPS  &kp LEFT         &kp DOWN     &kp UP  &kp RIGHT  &trans
- &trans  &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans    &trans  &trans  &trans        &trans   &trans   &trans  &trans  &kp HOME        &kp PG_UP  &kp PG_DN    &kp END  &trans
- &trans  &trans    &trans    &trans     &trans               &trans  &trans  &trans        &trans  &kp ESC  &kp DEL            &trans           &trans     &trans     &trans  &trans
+ &trans  &trans    &trans    &trans     &trans                                                                                   &trans           &trans     &trans     &trans  &trans
+ &trans  &trans    &trans    &trans     &trans     &trans                                                              &trans    &trans           &trans     &trans     &trans  &trans
+ &trans  &trans    &trans    &trans     &trans     &trans                                                           &kp PSCRN  &kp SLCK  &kp PAUSE_BREAK    &kp INS    &kp DEL  &trans
+ &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                                                            &kp CAPS  &kp LEFT         &kp DOWN     &kp UP  &kp RIGHT  &trans
+ &trans  &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans    &kp DEL  &kp ESC  &trans        &trans   &trans   &trans  &trans  &kp HOME        &kp PG_UP  &kp PG_DN    &kp END  &trans
+ &trans  &trans    &trans    &trans     &trans               &trans   &trans   &trans        &trans  &kp ESC  &kp DEL            &trans           &trans     &trans     &trans  &trans
             >;
         };
 
         layer_Magic {
             bindings = <
-  &bt BT_CLR            &none            &none            &none            &none                                                                                  &none   &none   &none   &none  &bt BT_CLR_ALL
-       &none            &none            &none            &none            &none            &none                                                         &none   &none   &none   &none   &none           &none
-       &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
- &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
-      &sys_reset            &none            &none            &none            &none  &rgb_ug RGB_EFR   &bt_2   &bt_3         &none   &none   &none   &none   &none   &none   &none   &none   &none          &sys_reset
-       &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &none
+ &bt BT_CLR   &none            &none            &none            &none                                                                                       &none   &none   &none   &none  &bt BT_CLR_ALL
+ &none        &none            &none            &none            &none            &none                                                              &none   &none   &none   &none   &none           &none
+ &none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                    &none   &none   &none   &none   &none           &none
+ &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                    &none   &none   &none   &none   &none     &bootloader
+ &sys_reset   &none            &none            &none            &none            &rgb_ug RGB_EFR  &bt_2  &bt_3  &none         &none  &none  &none   &none   &none   &none   &none   &none      &sys_reset
+ &none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none           &none   &none   &none   &none           &none
             >;
         };
 
@@ -310,7 +453,7 @@
  &trans  &kp F1          &kp F2          &kp F3           &kp F4           &kp F5                                                                &kp F6           &kp F7           &kp F8          &kp F9         &kp F10  &trans
  &trans  &kp F1          &kp F2          &kp F3           &kp F4           &kp F5                                                                &kp F6           &kp F7           &kp F8          &kp F9         &kp F10  &trans
  &trans  &my_ht LGUI N1  &my_ht LALT N2  &my_ht LCTRL N3  &my_ht LSHFT N4  &kp N5                                                                &kp N6  &my_ht RSHFT N7  &my_ht RCTRL N8  &my_ht RALT N9  &my_ht RGUI N0  &trans
- &trans  &kp LBKT        &kp RBKT        &kp GRAVE        &kp SEMI         &kp BSLH  &kp UNDER  &kp PLUS   &trans        &trans  &trans  &trans   &none           &none            &trans          &trans          &trans  &trans
+ &trans  &kp LBKT        &kp RBKT        &kp GRAVE        &kp SEMI         &kp BSLH  &my_under  &my_plus   &trans        &trans  &trans  &trans   &none           &none            &trans          &trans          &trans  &trans
  &trans  &trans          &trans          &trans           &trans                     &kp MINUS  &kp EQUAL  &trans        &trans  &trans  &trans                   &trans           &trans          &trans          &trans  &trans
             >;
         };
@@ -321,7 +464,7 @@
  &none   &none                     &none                     &none                      &none                      &none                                                                &none                      &none                      &none                     &none                     &none   &none
  &trans  &kp F11                   &kp F12                   &kp F13                    &kp F14                    &kp F15                                                            &kp F16                    &kp F17                    &kp F18                   &kp F19                   &kp F20  &trans
  &trans  &modded_ht LGUI LSHFT N1  &modded_ht LALT LSHFT N2  &modded_ht LCTRL LSHFT N3  &modded_ht LSHFT LSHFT N4  &my_pcnt                                                         &my_caret  &modded_ht RSHFT LSHFT N7  &modded_ht RCTRL LSHFT N8  &modded_ht RALT LSHFT N9  &modded_ht RGUI LSHFT N0  &trans
- &trans  &my_lbrc                  &my_rbrc                  &my_tilde                  &my_colon                  &my_pipe  &trans     &trans    &trans    &trans  &trans  &trans      &none                     &trans                     &trans                    &trans                    &trans  &trans
+ &trans  &my_lbrc                  &my_rbrc                  &my_tilde                  &my_colon                  &my_pipe  &trans     &trans    &trans    &trans  &trans  &trans      &none                     &trans                     &my_lt                    &my_gt                 &my_qmark  &trans
  &trans  &trans                    &trans                    &trans                     &trans                               &my_under  &my_plus  &trans    &trans  &trans  &trans                                &trans                     &trans                    &trans                    &trans  &trans
             >;
         };
